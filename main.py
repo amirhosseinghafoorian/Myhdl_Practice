@@ -1,17 +1,7 @@
-#!/usr/bin/env python3
-from myhdl import *
+# from Hello1 import *
+from Hello1 import *
+from Greeting import *
 
-
-@block
-def HelloWorld():
-
-    @always(delay(10))
-    def say_hello():
-        print(f'{now()} hello')
-
-    return say_hello
-
-
-inst = HelloWorld()
-inst.run_sim(30)
-
+if __name__ == '__main__':
+    inst = Greetings()
+    inst.run_sim(50)
